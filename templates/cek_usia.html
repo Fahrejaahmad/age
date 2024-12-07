@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cek usia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgba(9, 114, 44, 0.781);
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            width: 100%;
+            height: 100vh;
+        }
+
+        h1 {
+            /* background-color: red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 10vh;
+            font-family: cursive;
+            font-size: 2rem;
+            /* color: blueviolet; */
+        }
+
+        form {
+            background-color: rgb(85, 40, 248);
+            /* display: flex; */
+            /* justify-content: center; */
+            /* align-items: center; */
+            width: 80%;
+            height: 50vh;
+            margin: 0 auto;
+            padding-top: 20px;
+            border-radius: 40px;
+        }
+
+        label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: cursive;
+            font-weight: 800;
+            font-size: 2rem;
+            background-color: white;
+            width: 80%;
+            height: 50px;
+            margin: 0 auto;
+            border-radius: 40px;
+            /* margin-top: 20px; */
+        }
+
+        input {
+            display: flex;
+            margin: 0 auto;
+            margin-top: 50px;
+            padding: 10px;
+            width: 40%;
+            height: 50px;
+            font-size: 1.7rem;
+            border-radius: 30px;
+            font-family: cursive;
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 50px;
+            margin: 0 auto;
+            margin-top: 50px;
+            border-radius: 30px;
+            font-size: 2rem;
+            font-family: cursive;
+            font-weight: 400;
+            cursor: pointer;
+            background-color: goldenrod;
+        }
+
+        button:hover {
+            background-color: greenyellow;
+        }
+
+        .hasil {
+            background-color: crimson;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            height: 20vh;
+            margin: 0 auto;
+            font-size: 2rem;
+            font-family: cursive;
+            /* padding-top: 20px; */
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+        a {
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            margin-top: 10px;
+            width: 30%;
+            padding: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: black;
+            font-family: cursive;
+            font-size: 1.2rem
+        }
+        a:hover {
+            background-color: rgb(103, 103, 241);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>pengecekan usia berdasarkan tahun lahir</h1>
+    <form method="post" action="/usia">
+        <label>masukan tahun lahir</label>
+        <input type="number" name="tahun_lahir">
+        <button type="submit">hitung usia</button>
+    </form>
+    {% if usia is not none %}
+    <p class="hasil">usia ada saat ini adalah {{usia}} tahun</p>
+    {% endif %}
+
+        <a href="/">kembali ke halaman utama</a>
+
+</body>
+
+</html>
